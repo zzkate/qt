@@ -18,7 +18,6 @@ set(PROJECT_SOURCES
         settings.cpp
         mainwindow.cpp
         mainwindow.h
-        mainwindow.ui
 )
 
 add_subdirectory(test)
@@ -27,8 +26,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(pr1
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-        settings.h settings.cpp
-        fileworker.h fileworker.cpp
+        settings.h
+        fileworker.h
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET pr1 APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
